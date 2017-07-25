@@ -1,0 +1,5 @@
+
+/* URBS Override Bootstrap */
+input[type=text]{height: auto !important;}
+[class^="icon-"], [class*=" icon-"]{font-size: 20px;}
+textarea{width:auto;}

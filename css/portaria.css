@@ -1,0 +1,16 @@
+body{margin:0;}
+dd{text-align: left;margin-left: 65px;}
+dt{text-align:left;font-weight:bold;font-family:verdana;font-size: 11px;border-bottom: 1px dotted;}
+img{ border: none;}
+
+input[type="text"],input[type="password"],input[type="file"] {border: #999 solid 1px;color: #222;background-color: white;padding: 4px;}
+input[type="password"]:focus{border: darkorange solid 1px;box-shadow: rgba(0,0,0,.4) 2px 2px 2px;}	
+input[type="text"]:focus{border: darkorange solid 1px;box-shadow: rgba(0,0,0,.4) 2px 2px 2px;}	
+select {border: 1px solid #999;background-color: white;}
+select:focus {border: darkorange solid 1px;box-shadow: rgba(0,0,0,.4) 2px 2px 2px;}	
+table{margin: 0 auto;}
+textarea {font: 0.9em Verdana,sans-serif; border: #999 solid 1px; color: #222; background-color: white; width:80%}
+textarea:focus { border: darkorange solid 1px;box-shadow: rgba(0,0,0,.4) 2px 2px 2px;}
+/**/
+
+tr.disabled { color: #ccc; }
