@@ -120,3 +120,11 @@ function trataSaida($var){
 function dinheiroPrint($valor){
 	return number_format(str_replace(',','.',$valor), 2, "," , ".");
 }
+
+
+function getCulto($hora){
+	$hh = str_replace(":","", substr($hora,0,5));
+	if($hh < 1030) return "Manhã 1";
+	else if($hh < 1500) return "Manhã 2";
+	return "Noite";
+}

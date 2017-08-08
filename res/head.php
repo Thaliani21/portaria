@@ -11,9 +11,9 @@
     <title><?php echo $appname;?></title>
     <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
 
-    <link rel="shortcut ico" href="http://127.0.0.1/portaria/imagens/up.jpg">
-    <link rel="apple-touch-icon image_src" href="http://127.0.0.1/portaria/imagens/up.jpg">
-    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://127.0.0.1/portaria/imagens/up.jpg">
+    <link rel="shortcut ico" href="<?php echo $caminho;?>imagens/up.jpg">
+    <link rel="apple-touch-icon image_src" href="<?php echo $caminho;?>imagens/up.jpg">
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="<?php echo $caminho;?>imagens/up.jpg">
 
 
     <!-- JQuery -->
