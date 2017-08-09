@@ -24,6 +24,6 @@ TODO:
  - [ ] Desativar pessoas com cadastro mais antigo que 4 anos
  - [ ] Atualizar telefone
  - [ ] Checkout em lote
- - [ ] Relatórios:
-     - [ ] Quantitativo (até 10h30) (depois das 10h30) e (depois das 18h)
-     - [ ] Diário qualitativo
+ - [X] Relatórios:
+     - [X] Quantitativo (até 10h30) (depois das 10h30) e (depois das 18h)
+     - [X] Diário qualitativo

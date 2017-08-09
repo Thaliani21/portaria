@@ -27,7 +27,7 @@
     <!-- CSS -->
     <!-- bootstrap -->
     <script src='<?php echo CSS ;?>bootstrap/js/bootstrap.min.js' type='text/javascript'></script>
-    <link href="<?php echo CSS ;?>bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo CSS ;?>bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <link href="<?php echo CSS ;?>font-awesome-4.5/css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php echo CSS ;?>noPrint.css" rel="stylesheet">

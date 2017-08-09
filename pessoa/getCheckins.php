@@ -9,11 +9,11 @@
                         tb001_nome AS NOME,
                         tb001_telefone AS TELEFONE,
                         tb002_cracha AS CRACHA,
-                        tb002_in_time AS INTM,
-                        tb002_out_time AS OUTTM
+                        DATE_FORMAT(tb002_in_time,'%d/%m/%Y %H:%i:%s') AS INTM,
+                        DATE_FORMAT(tb002_out_time,'%H:%i:%s') AS OUTTM
                      FROM portaria.tb002_checkin t2
                      LEFT JOIN portaria.tb001_pessoa t1 ON (t2.tb001_id = t1.tb001_id)
-                     WHERE tb002_in_time > DATE_SUB(tb002_in_time, INTERVAL 6 HOUR)";
+                     WHERE tb002_in_time > DATE_SUB(NOW(), INTERVAL 6 HOUR)";
 
     $sql_lista = $db->query($param_lista);
 

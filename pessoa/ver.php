@@ -21,26 +21,49 @@
     }
 
     if(!$row){
-        echo "<h4>Pessoa não encontrada :/";
+        echo "<h4>Pessoa não encontrada :/</h4>";
     }else{
         extract($row); ?>
-        <h4><?php echo $ID;?></h4>
-        <i>Cadastrado em : <?php echo $DT_CAD;?></i>
-        <br>
-        <b>Nome:</b>
-        <input type='text' name='nome' id='nome' readonly value='<?php echo $NOME;?>'>
-        <br>
-        <b>Telefone:</b>
-        <input type='text' name='telefone' id='telefone' readonly value='<?php echo $TELEFONE;?>'>
-        <br>
-        <b>Ativo:</b>
-        <select name='ativo' id='ativo' dislabled='true'>
-            <option value='1'>SIM</option>
-            <option value='2'>NÃO</option>
-        </select>
-        <script>$('#ativo').val('<?php echo $ATIVO;?>');</script>
+        <h4></h4>
 
-        <div class='no-print'>
-            <br><br><br>Informações não editáveis ainda
+
+        <div class='well'>
+            <div class='divlinha'>
+                <div class='conjunto'>
+                    <div class='rotulo'><b style='font-size:18px'>#<?php echo $ID;?></b></div>
+                    <div class='campo' style='padding-top:5px'><i>Cadastrado em : <?php echo $DT_CAD;?></i></div>
+                </div>
+            </div>
+
+            <div class='divlinha'>
+                <div class='conjunto'>
+                    <div class='rotulo'>Nome:</div>
+                    <div class='campo'><input type='text' name='nome' id='nome' readonly value='<?php echo $NOME;?>'></div>
+                </div>
+            </div>
+
+            <div class='divlinha'>
+                <div class='conjunto'>
+                    <div class='rotulo'>Telefone:</div>
+                    <div class='campo'><input type='text' name='telefone' id='telefone' readonly value='<?php echo $TELEFONE;?>'></div>
+                </div>
+            </div>
+
+            <div class='divlinha'>
+                <div class='conjunto'>
+                    <div class='rotulo'>Ativo:</div>
+                    <div class='campo'>
+                        <select name='ativo' id='ativo' dislabled='true'>
+                            <option value='1'>SIM</option>
+                            <option value='2'>NÃO</option>
+                        </select>
+                        <script>$('#ativo').val('<?php echo $ATIVO;?>');</script>
+                    </div>
+                </div>
+            </div>
+
+            <div class='no-print'>
+                <br><br><br>Informações não editáveis ainda
+            </div>
         </div>
     <?php  }
