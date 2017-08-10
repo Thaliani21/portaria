@@ -34,3 +34,5 @@
     $protect = array("'"=>"",'"'=>'');
     $appname = str_replace('/','',$appname);
     /**/
+
+    ini_set( 'default_charset', 'iso-8859-1');

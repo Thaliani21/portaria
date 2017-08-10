@@ -11,9 +11,10 @@
                     t2.tb001_id AS ID_PESSOA
                  FROM portaria.tb002_checkin t2
                  LEFT JOIN portaria.tb001_pessoa t1 ON (t2.tb001_id = t1.tb001_id)
-                 WHERE DATE(tb002_in_time) = STR_TO_DATE('$dt','%d/%m/%Y')
+                 /*WHERE DATE(tb002_in_time) = STR_TO_DATE('$dt','%d/%m/%Y')*/
+				 WHERE DATE(tb002_in_time) = STR_TO_DATE('$dt','%Y-%m-%d')
                  ORDER BY tb002_in_time ASC ";
-
+        //echo $param;
         $sql_lista = $db->query($param);
     }
     ?>
@@ -31,7 +32,7 @@
             $culto = getCulto($row['DT']);
 
             if($old_culto != $culto){
-                echo "<tr><td colspan='3' class='info'><b>$culto</b></td></tr>";
+                echo "<tr class='info'><td></td><td colspan='2' class='info'><b>$culto</b></td></tr>";
                 $old_culto = $culto;
             }
           ?>

@@ -37,7 +37,13 @@
     public function getCon(){ return $this->con; }
 
     public function query($param){
-        return mysql_query($param, $this->con);
+        $sql = mysql_query($param, $this->con);
+        if(!$sql){
+            print_r(mysql_error());
+            die;
+        }
+
+        return $sql;
     }
 
 }
