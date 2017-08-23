@@ -46,5 +46,24 @@
         return $sql;
     }
 
+    public function getQuantReg($param){
+        $parampg = "SELECT count(*) AS NUMERO FROM ($param) TC";
+
+        $sql_pg = $this->query($parampg);
+        $rw = mysql_fetch_assoc($sql_pg);
+        return intval($rw["NUMERO"]);
+    }
+
+    public function paginado($param, $inicial, $final){
+        $lim = intval($final - $inicial);
+        if($lim < 1) $lim = 30;
+
+        $reparam = "SELECT *  FROM (
+                        $param
+                    ) PAGINATED
+                    LIMIT $lim OFFSET $inicial";
+        return $this->query($reparam);
+    }
+
 }
     $db = mydatabase::singleton();

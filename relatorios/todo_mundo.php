@@ -21,7 +21,12 @@
             ) T
              ORDER BY NOME ASC ";
 
-    $sql_lista = $db->query($param);
+    if($_GET['all']){
+        $sql_lista = $db->query($param);
+    }else{
+        $quantreg = $db->getQuantReg($param);
+        $sql_lista = $db->paginado($param, $inicial, $final);
+    }
 
     ?>
     <h4>Portaria - Relatório Todos Cadastrados</h4>
@@ -52,4 +57,10 @@
         <?php } ?>
     </table>
 
-<?php require_once(RES."footer.php");
+<?php
+    if(!$_GET['all']){
+        require_once(RES.'paginacao.php');
+        echo "<a class='no-print' href='?all=1'>Não paginar</a>";
+    }
+
+ require_once(RES."footer.php");
