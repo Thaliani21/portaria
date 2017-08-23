@@ -66,4 +66,33 @@
                 <br><br><br>Informações não editáveis ainda
             </div>
         </div>
+
+        <div class='well'>
+            <h4>Histórico</h4>
+            <table class='table table-striped table-hover'>
+                <tr>
+                    <th>Entrada</th>
+                    <th>Saída</th>
+                    <th>Crachá</th>
+                </tr>
+            <?php
+                $param_h = "SELECT
+                                DATE_FORMAT(t2.tb002_in_time,'%d/%m/%Y %H:%i:%s') AS IN_TIME,
+                                DATE_FORMAT(t2.tb002_out_time,'%d/%m/%Y %H:%i:%s') AS OUT_TIME,
+                                tb002_cracha AS CRACHA
+                            FROM portaria.tb002_checkin t2
+                            WHERE tb001_id =  $id
+                            ORDER BY tb002_in_time DESC";
+
+                $sql_h = $db->query($param_h);
+
+                while($row = mysql_fetch_assoc($sql_h)){ ?>
+                    <tr>
+                        <td><?php echo $row['IN_TIME'];?></td>
+                        <td><?php echo $row['OUT_TIME'];?></td>
+                        <td><?php echo $row['CRACHA'];?></td>
+                    </tr>
+                <?php } ?>
+            </table>
+        </div>
     <?php  }

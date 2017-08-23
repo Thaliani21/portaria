@@ -6,6 +6,7 @@ $menu = array(
 );
 
 $submenu['menu1'][] = array('href' => CAMINHO_SIS."relatorios/quantitativo.php", 'titlulo' => "Quantitativo");
+$submenu['menu1'][] = array('href' => CAMINHO_SIS."relatorios/todo_mundo.php", 'titlulo' => "Todos os Cadastros");
 //$submenu['menu1'][] = array('class' =>'divider' );
 
 

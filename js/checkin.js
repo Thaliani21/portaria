@@ -151,10 +151,8 @@ function nomeKeyup(e){
 
 function animateNome(){
     listinha = $('#dvListaSuspensa div');
-
-    if(listinha[idx_nomes-1]) $(listinha[idx_nomes-1]).css('background','inherit').css('color','inherit');
+    listinha.css('background','inherit').css('color','inherit');
     $(listinha[idx_nomes]).css('background','#aaaaaa').css('color','#aaFFdd');
-    if(listinha[idx_nomes+1]) $(listinha[idx_nomes+1]).css('background','inherita').css('color','inherit');
 }
 /**/
 
